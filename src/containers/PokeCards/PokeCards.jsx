@@ -3,6 +3,7 @@ import { Card, Modal, Button } from 'antd';
 import mainStore from '../../stores/mainStore';
 import './pokeCards.css';
 import { observer } from 'mobx-react-lite';
+import { useParams } from 'react-router';
 
 const PokeCards = observer(() => {
   const [isModalVisible, setIsModalVisible] = React.useState(false);
@@ -47,6 +48,8 @@ const PokeCards = observer(() => {
   //   });
   // };
   // foundPokemons();
+
+  // const {page, per_page} = useParams()
 
   return (
     <div className="container_items">

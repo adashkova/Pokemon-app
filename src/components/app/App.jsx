@@ -1,14 +1,21 @@
 import PokeCards from '../../containers/PokeCards/PokeCards';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import './App.css';
 import 'antd/dist/antd.css';
 import Header from '../header/Header';
 import SearchBox from '../../containers/search/SearchBox';
 import PaginationContainer from '../../containers/pagination/Pagination'
 
-function App() {
+const App = () => {
+
+  const location = useLocation()
+
+  console.log(`location`, location)
+
+  console.log('parasm =>>> ',useParams())
   return (
-    <Router>
+
+    <>
       <Header />
       <div className="App">
         <SearchBox />
@@ -17,7 +24,8 @@ function App() {
         </div>
         <PaginationContainer />
       </div>
-    </Router>
+    </>
+
   );
 }
 

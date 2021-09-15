@@ -2,6 +2,7 @@ import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'mobx-react';
 import mainStore from './stores/mainStore';
+import { Root } from './components/Root'
 
 import './index.css';
 import App from './components/app/App';
@@ -9,4 +10,4 @@ import App from './components/app/App';
 //   mainStore,
 // };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
